@@ -1,0 +1,87 @@
+package banco;
+import java.nio.charset.StandardCharsets;
+import java.io.FileOutputStream;
+import java.io.OutputStreamWriter;
+
+
+public class Conta {
+
+    String titular;
+    String banco; 
+    int conta;
+    String agencia;
+
+    double saldo;
+
+    String creationDate;
+    
+    public Conta(String titular, String banco, int conta, String agencia, double saldo, String creationDate) {
+    	this.titular = titular;
+        this.banco = banco; 
+        this.conta = conta;
+        this.agencia = agencia;
+        this.saldo = saldo;
+        this.creationDate = creationDate;
+	}
+
+	public String getTitular() {
+        return titular;
+    }
+
+    public void setTitular(String titular) {
+        this.titular = titular;
+    }
+    
+    public String getBanco () {
+    	return banco;
+    }
+    
+    public void setBanco (String banco) {
+    	this.banco = banco; 
+    }
+    
+    public int getConta() {
+        return conta;
+    }
+
+    public void deposito(double depositar){
+        if(depositar > 0) {
+            saldo = saldo + depositar;
+            System.out.println("Deposito efetuado com sucesso!");
+            System.out.print(fixUtf8(String.format("\nSeu saldo corresponde: %1$s ", saldo)));
+            return;
+        }
+        System.out.print(fixUtf8("\n Você no pode depositar valores negativos."));
+    }
+
+    public void redimentoMensal(){
+        if(saldo > 0){
+            double calc = (1.0024  * saldo);
+
+            saldo = calc;
+            System.out.println(fixUtf8("\nO rendimento desse mes foi 0.24%, saldo atual: " + saldo));
+        }
+        System.out.print(fixUtf8("\nSeu saldo esta insuficiente para calcular o rendimento."));
+    }
+
+    public void sacar(double retirada){
+        if(retirada > saldo){
+            System.out.print(fixUtf8("\nO saldo da sua conta esta insuficiente para realizar essa operaçao."));
+            return;
+        }
+        if(retirada > 0) {
+            saldo = saldo - retirada;
+
+            System.out.println("\nSaque efetuado com sucesso!");
+            System.out.print(fixUtf8(String.format("\nSeu saldo atual corresponde: %1$s ", saldo)));
+            return;
+        }
+
+        System.out.print(fixUtf8("\n Inviavel realizar qualquer tipo de movimento na sua conta."));
+    }
+
+    private static String fixUtf8(String message) {
+        return new String(message.getBytes(StandardCharsets.UTF_8));
+    }
+
+}

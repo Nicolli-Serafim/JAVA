@@ -1,0 +1,18 @@
+package banco;
+import java.nio.charset.StandardCharsets;
+import java.io.FileOutputStream;
+import java.io.OutputStreamWriter;
+
+
+public class Main {
+
+    public static void main(String[] args) {
+        Conta infos = new Conta("Gustavo", "Santader", 546, "5674", 500.00, "24/09/2002");
+
+        infos.deposito(1000.50);
+ 
+        infos.sacar(500.20);
+
+        infos.redimentoMensal();
+    }
+}
