@@ -1,0 +1,11 @@
+package onibus;
+
+public class Main {
+	   
+	    public static void main(String[] args) {
+	        bus b1 = new bus(5614-10, "Partida", "Paulista", 3, 70, 50);
+	        bus b2 = new bus(576-10, "Partida", "Jabaguara", 5, 50, 30);
+	        System.out.println(b1.getParadas());
+	        System.out.println(b2.getParadas());
+	    }
+	}
