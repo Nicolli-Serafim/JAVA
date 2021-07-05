@@ -1,0 +1,73 @@
+package pacote;
+import java.util.Scanner;
+
+public class Ex7 {
+
+	public static void main(String[] args) {
+		
+			System.out.println("Escreva o primeiro número: ");
+			Scanner s = new Scanner(System.in);
+	        int n1 = s.nextInt();
+	        System.out.println("Escreva o segundo número: "); 
+	        int n2  = s.nextInt();
+	        System.out.println("Escreva o terceiro número: "); 
+	        int n3  = s.nextInt();
+	        System.out.println("Escreva o quarto número: "); 
+	        int n4 = s.nextInt();
+	        System.out.println("Escreva o quinto número: "); 
+	        int n5  = s.nextInt();
+	        System.out.println("Escreva o sexto número: "); 
+	        int n6  = s.nextInt();
+	        System.out.println("Escreva o sétimo número: "); 
+	        int n7  = s.nextInt();
+	        System.out.println("Escreva o oitavo número: "); 
+	        int n8  = s.nextInt();
+	        System.out.println("Escreva o nono número: "); 
+	        int n9  = s.nextInt();
+	        System.out.println("Escreva o décimo número: "); 
+	        int n10  = s.nextInt();
+	        int soma=0;
+	        
+	  if(n1<40) {
+		  soma+=n1;
+	 
+	  }
+	  if(n2<40) {
+		  soma+=n2;
+	 
+	  }
+	  if(n3<40) {
+		  soma+=n3;
+	 
+	  }
+	  if(n4<40) {
+		  soma+=n4;
+	 
+	  }
+	  if(n5<40) {
+		  soma+=n5;
+	 
+	  }
+	  if(n6<40) {
+		  soma+=n6;
+	 
+	  }
+	  if(n7<40) {
+		  soma+=n7;
+	 
+	  }
+	  if(n8<40) {
+		  soma+=n8;
+	 
+	  }
+	  if(n9<40) {
+		  soma+=n9;
+	 
+	  }
+	  if(n10<40) {
+		  soma+=n10;
+	 
+	  }
+		System.out.println("A soma dos números menores que 40 é : "+soma);
+	}
+}

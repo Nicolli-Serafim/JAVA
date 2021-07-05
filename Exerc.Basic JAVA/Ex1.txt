@@ -1,0 +1,28 @@
+package pacote;
+
+import java.util.Scanner;
+
+public class Ex1 {
+ 
+	public static void main(String[] args) {
+	    
+		Scanner sc = new Scanner(System.in) ;
+		
+
+	    System.out.print("Digite o seu numero: ");
+
+	  int numero = sc.nextInt();
+	   
+	   System.out.println(numero);
+	    
+	   if (numero>0) {
+		   System.out.println("Esse numero e positivo");
+	   }
+	   else if (numero==0) {
+		   System.out.println("Esse numero e zero");
+	   }
+	   else {	   
+		   System.out.println("Esse numero e negativo");
+	}
+}
+}

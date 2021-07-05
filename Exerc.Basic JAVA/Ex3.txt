@@ -1,0 +1,53 @@
+package pacote;
+
+import java.util.Scanner;
+
+public class Ex3 {
+public static void main(String[] args) {
+	    
+		Scanner sc = new Scanner(System.in) ;
+		
+		 int soma = 0;
+		   
+	    System.out.print("Digite o seu primeiro numero: ");
+
+	  int n1 = sc.nextInt();
+	   
+	   System.out.println(n1);
+	   
+	    System.out.print("Digite o seu segundo numero: ");
+
+	  int n2 = sc.nextInt();
+	   
+	   System.out.println(n2);
+	   
+	    System.out.print("Digite o seu terceiro numero: ");
+
+	  int n3 = sc.nextInt();
+	   
+	   System.out.println(n3);
+	   
+	   if(n1 > n3 & n2 > n3){
+
+		   System.out.print("A soma dos dois maiores : " + (n1 + n2));
+
+		   }
+
+
+
+		   else if(n1 > n2 & n3 > n2){
+
+		   System.out.print("A soma dos dois maiores e: " + (n1 + n3));
+
+		   }
+
+
+
+		   else{
+
+		   System.out.print("A soma dos dois maiores e: " + (n2 + n3));
+
+		   }
+	 
+}
+}
